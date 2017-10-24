@@ -10,5 +10,17 @@
     <div class="container">
         Chat Application
     </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        (function(){
+            var socket = io();
+            socket.on('connect', () => {
+                console.log("Connected to Server");
+            });
+            socket.on('disconnect', () => {
+                console.log("Disconnected to Server");
+            })
+        })();
+    </script>
 </body>
 </html>
